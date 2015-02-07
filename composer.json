@@ -1,0 +1,13 @@
+{
+    "name":"tadeubarbosa/teedcreate",
+    "authors":[
+        {
+            "name":"Tadeu Barbosa",
+            "email":"tadeufbarbosa@gmai.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{"":"src/"},
+        "files":["src/controller/defines.php"]
+    }
+}

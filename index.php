@@ -1,13 +1,27 @@
 <?php
 
-    require_once '/vendor/autoload.php';
+	require_once '/vendor/autoload.php';
 
-    $page = 'public_html/';
+	///
 
-    $page .= isset($_GET['page'])&&!empty($_GET['page'])? "{$_GET['page']}.php": 'index.php';
+	if(isset($_GET['page'])&&$_GET['page']==='response')
+	{
+		header('Content-Type: text/json; charset=utf8');
+		extract($_POST);
+		include 'src/controller/response.php';
+		exit;
+	}
 
-    if(!file_exists($page)) $page = 'public_html/index.php';
+	///
 
-    ////
+	$page = VIEWS . (isset($_GET['page'])&&!empty($_GET['page'])? $_GET['page']: 'index') . '.php';
 
-    include 'public_html/templates/template.php';
+	if(!file_exists($page)) $page = VIEWS . 'error.php';
+
+	///
+
+	if(!strpos($page,'config')&&empty(file_get_contents(JSON_CONFIGS))) header('Location: ' . BASE . 'config');
+
+	///
+
+	include TEMPLATES . 'template.php';

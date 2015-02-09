@@ -8,6 +8,8 @@
     ],
     "autoload":{
         "psr-4":{"":"src/"},
-        "files":["src/controller/defines.php"]
+        "files":[
+            "src/controller/defines.php"
+        ]
     }
 }

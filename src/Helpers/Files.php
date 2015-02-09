@@ -1,29 +1,27 @@
 <?php
 
-    namespace Helpers;
+	namespace Helpers;
 
-    trait Files
-    {
+	trait Files
+	{
 
-        /**
-         * Put data to a file
-         * @param array  $data        array ou object
-         * @param string $file        file name
-         * @param string [$type='a+'] type
-         */
-        public static function put($data,$file,$type='a+')
-        {
-            if(is_array($data)||is_object($data)) json_encode($data);
-            // Write into file {$file}            
-            $file = fopen($file, $type);
-            fwrite($file, $data);
-            fclose($file);
-            return;
-        }
+		public static function putFile($data,$file,$type='a+')
+		{
 
-        public static function get($file)
-        {
-            return json_decode(file_get_contents($file));
-        }
+			if(is_array($data)||is_object($data)) $data = json_encode($data);
 
-    }
+			$file = fopen($file, $type);
+			fwrite($file, $data);
+			fclose($file);
+			return;
+		}
+
+		public static function getFile($file, $string=false)
+		{
+			if(!file_exists($file)) self::putFile('',$file);
+
+			if( $string) return file_get_contents($file);
+			else return json_decode(file_get_contents($file));
+		}
+
+	}

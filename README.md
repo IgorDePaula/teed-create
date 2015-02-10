@@ -1,12 +1,12 @@
-## Hello There! Welcome to APP Teed Create!
+## Olá! Seja bem vindo ao APP Teed Create!
 
-What is this App?
+O que é este APP ?
 
-Well, basically it helps us time to start new projects.
+Bem, basicamente ele nos ajuda na hora de iniciar novos projetos.
 
-For example: I have a project in the url **localhost/teedcreate**, I can easily turn it into **teedcreate.dev**.
+Por exemplo: Eu tenho um projeto na url localhost/teedcreate, eu posso facilmente transformá-lo em teedcreate.dev.
 
 
-Learn more at my blog: https://tadeufbarbosa.wordpress.com/2015/02/10/teed-create
+Saiba mais em meu blog: https://tadeufbarbosa.wordpress.com/2015/02/10/teed-create
 
-Or watch this video presentation: https://www.youtube.com/watch?v=iIrD1DXOHZo
+Ou assista a esse video de apresentação: https://www.youtube.com/watch?v=iIrD1DXOHZo

@@ -1,22 +1,4 @@
 
-
-<?php
-
-	$host = new \Helpers\Hosts;
-
-	$local = array(
-
-		'url' => "localhost",
-
-		'domn' => '',
-
-		'folder' => 'c:/wamp/www'
-
-	);
-
-	$host->create($local);
-
-?>
 	<div class="row" ng-controller="HomeController">
 
 		<div class="col-sm-9" style="min-height:200px;border-right:1px solid #DDD">

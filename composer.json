@@ -1,0 +1,10 @@
+{
+	"name":"tadeubarbosa/teed-create",
+	"description":"Create a new virtual host to yours local projects.",
+	"autoload":{
+		"psr-4":{
+			"":"src/"
+		},
+		"files":["src/defines.php","src/start.php"]
+	}
+}
